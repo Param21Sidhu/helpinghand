@@ -10,12 +10,13 @@ const res = require("express/lib/response");
 var mysql = require("mysql");
 var nodemailer=require("nodemailer");
 const { param } = require("express/lib/request");
+const port=process.env.PORT || 8000;
 
 
 
 
-app.listen(3022, function () {
-    console.log("server started");
+app.listen(port, function () {
+    console.log("server started ${port}");
   });
 
   app.get("/", function (req, resp) {
