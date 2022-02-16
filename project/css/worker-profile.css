@@ -1,0 +1,58 @@
+.container
+{
+    background-image: url(../pics/bg\ dolphins.jpg);
+}
+form{
+    border: 2px black solid;
+    height: 650px;
+}
+#rhave3
+{
+  
+   margin-top: 13px;
+}
+#rhaveadd
+{
+    
+    margin-top: 13px;
+}
+#rhave31
+{
+    
+    margin-top: 13px;
+}
+#rhavearea
+{
+    
+    margin-top: 13px;
+    
+}
+#rhavepic
+{
+    
+    margin-top: 13px;
+}
+#btn1
+{
+    
+    margin-top: 13px;
+}
+#btn2
+{
+    float: right;
+}
+label{
+    color: red;
+}
+h3
+{
+    color: lavenderblush;
+}
+.not-ok
+{
+    background-color: red;
+    
+}
+.ok{
+    background-color: royalblue;
+}

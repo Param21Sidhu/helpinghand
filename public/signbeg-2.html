@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            sign
+        </title>
+        <link rel="stylesheet" href="css/sign.css">
+        <script>
+       function  doshowprev(ref)
+       {
+        alert("op");
+    var image = document.getElementById('prev');
+image.src = URL.createObjectURL(ref.files[0]);
+       }
+    </script>
+    </head>
+    <body>
+        <center>
+            <fieldset >
+                <legend>Sign Up Here</legend>
+            <form action="/entersign" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                     <td> 
+                        Email</td>
+                       <td> <input type="text" name="txtuid" id="ok"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="txtpwd"></td>
+                    </tr>
+               
+                    <tr>
+                        <td>
+                           
+                                <input type="radio" name="txt1">Bathinda
+                                <input type="radio" name="txt1">Bombay
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="file" name="pic"  onchange="doshowprev(this);"><br>
+                            <img src="" alt="" id="prev" width="100" height="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit">
+                           
+                        </td>
+                    </tr> 
+                </table>
+            </form>
+            </fieldset>
+        </center>
+    </body>
+</html>

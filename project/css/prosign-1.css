@@ -1,0 +1,46 @@
+#b1
+{
+   
+    padding-top: 20px;
+    padding-left:10px;
+}
+#r2
+{
+    margin-top: 25px;
+}
+#r3
+{
+    margin-top: 25px;
+}
+#r4
+{
+    margin-top: 25px;
+
+}
+
+
+
+#rs
+{
+    margin-top: 25px;
+}
+#rf
+{
+    margin-top: 25px; 
+}
+input[type="file"]
+{
+    width: 400px;;
+}
+body
+{
+    background-color: aqua;
+}
+.not-ok
+{
+    background-color: red;
+    
+}
+.ok{
+    background-color: royalblue;
+}

@@ -1,0 +1,80 @@
+#p1
+{
+    width: auto;
+    height: 225px;
+    
+    background-image: url(../pics/NicePng_id-card-png_9217999.png);
+    background-size: contain;
+}
+#p2
+{
+    width: auto;
+    height: 225px;
+    background-image: url(../pics/clipart289430.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#welcome
+{
+    background-image: url(../pics/itl.cat_yellow-gold-wallpaper_3269961.png);
+    background-size: cover;
+}
+#frm
+{
+
+height: 420px;
+
+}
+#table
+{
+   
+    height: 420px;
+     width: inherit;    
+}
+td
+{
+    text-align: center;
+}
+#c1
+{
+    margin-left: 150px;
+}
+#frm2
+{
+
+height: 420px;
+
+}
+#table2
+{
+   
+    height: 420px;
+     width: inherit;    
+}
+#p3
+{
+    width: auto;
+    height: 225px;
+    background-image: url(../pics/settings.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#p4
+{
+    width: auto;
+    height: 225px;
+    background-image: url(../pics/logout.png);
+    background-size: contain;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c3
+{
+    margin-left: 150px;
+}
+#c4
+{
+    margin-left: 470px;
+}

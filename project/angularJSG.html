@@ -1,0 +1,149 @@
+
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var mymodule=angular.module("mymodule",[]);
+        var mycontroller=mymodule.controller("mycontroller",function($scope,$http){
+
+
+            $scope.fname="itz Sidhu";
+            $scope.lname="isaak";
+
+            $scope.dojoin=function()
+            {
+                $scope.full=$scope.fname+" "+$scope.lname;
+            }
+            $scope.jsonAry=[{
+                name:"laptop",
+                price:80000
+            },
+        {
+            name:"mobile",
+            price:20000
+        },
+        {
+            name:"keyboard",
+            price:50000 
+        },
+        {
+            name:"mouse",
+            price:40000
+        }
+      
+    ];
+    
+   }
+    $scope.dodelete=function(name){
+            alert(name);
+        }
+
+
+        //to give 0th as default value;
+        $scope.selitem=$scope.jsonAry[0].name;
+   $scope.doshowselected=function()
+   {
+       alert($scope.selitem);
+   }
+  
+
+   $scope.dofetch=function()
+   {
+       alert("ok");
+       var url="/showallangular";
+       $http.get(url).then(kuchfxgood,kuchfxbad);
+       function kuchfxgood(response)
+       {
+           //alert(JSON.stringify(response.data));
+           $scope.jsonAryOrg=response.data;
+       }
+       function kuchfxbad(response)
+       {
+           alert(JSON.stringify(response.data));
+       }
+   }
+ 
+   $scope.doDelete=function(email)
+   {
+    if(confirm("Are you sure")==false)
+       return;
+       var url="/deleteangular?x="+email;
+       $http.get(url).then(kuchfxgood,kuchfxbad);
+       
+           function kuchfxgood(response)
+           {
+               alert(JSON.stringify(response.data));
+               $scope.dofetch();
+           }  
+           function kuchfxbad(response)
+           {
+              alert(JSON.stringify(response.data));
+           }
+       
+
+   }
+
+//-------------------------------------------------
+$scope.jsonAryCity;
+$scope.dofetchAllCity=function()
+{
+    var url="/fetchCities";
+    $http.get(url).then(kuchfxgood,kuchfxbad);
+    function kuchfxgood(response)
+    {
+        $scope.jsonAryCity=response.data;
+    }
+    function kuchfxbad(response)
+    {
+        alert(JSON.stringify(response.data));
+    }
+}
+//-----------------
+
+        })
+    </script>
+</head>
+<!--here view is attached with controller-->
+<body do ng-app="mymodule" ng-controller="mycontroller"ng-init="fetchAllCity();">
+    <input type="button" ngclick="something();" value="ok">
+    First name=<input type="text" ng-model="fname"><br>
+ {{fname}}
+ <hr>
+ Last name=<input type="text" ng-model="lname">
+ <input type="button" ng-click="dojoin();" value="concatenate">
+ <center>
+     Full Name=<input type="text" ng-model="full">
+      <br>ALL RECORDS <br>
+      <table border="1" width="500">
+          <tr ng-repeat="obj in jsonAry" >
+              <td align="center">{{obj.name}}</td>
+              <td align="center">{{obj.price}}</td>
+              <td>
+                  <input type="button" value="Delete" ng-click="dodelete(obj.name);">
+              </td>
+          </tr>
+      </table>
+
+    <p>
+        <hr>
+        CITY
+        <select ng-change="selectedcity(obj.Cities);">
+            <option ng-repeat="obj in jsonAryCity" value="{{obj.Cities}}">{{obj.Cities}}</option>
+        </select>
+    </p>
+    <input type="button" value="fetch all" ng-click="dofetch();">
+    <table border="1">
+        <tr ng-repeat="obj in jsonAryOrg">
+          <td>{{obj.Email}}</td>
+          <td>{{obj.Name}}</td>
+          <td>{{obj.Contact}}</td>
+          <td>{{obj.Cities}}</td>
+          <td>{{obj.Picture}}</td>
+          <td ><img src="uploads/{{obj.Picture}}" width="150px" height="100px" alt=""></td>
+       <td><input type="button" value="Delete" ng-click="doDelete(obj.Email);"></td>
+        </tr>
+    </table>
+ </center>
+</body>
+</html>

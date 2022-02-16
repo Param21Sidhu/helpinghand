@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" href="css/worker-profile.css">
+
+
+
+
+
+    <script>
+        var ja=false;
+        $(document).ready(function(){
+            $("#txtemail").blur(function(){
+              
+        var a=/^([a-zA-Z0-9_.+-])+\@(([a-zA-a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var sign=$("#txtemail").val();
+            
+        if($("#txtemail").val()=="")
+        {
+            $("#txtemail").addClass("not-ok"). removeClass("ok");
+            $("#sym1").css("display","inline");
+            $("#sym1").html("Fill value");
+             ja=false
+        }
+        else if(a.test(sign)==false){
+                 $("#txtemail").addClass("not-ok").removeClass("ok");
+                 $("#sym1").css("display","inline");
+                      $("#sym1").html("Fill Correct Value");
+                       ja=false
+                      
+                  }
+                  else
+                  {
+                      $("#txtemail").addClass("ok").removeClass("not-ok");
+                      $("#sym1").css("display","inline");
+                      $("#sym1").html("");
+                       ja=true 
+                  }
+        })
+
+
+
+
+
+
+
+
+        $("#txtnum").blur(function(){
+      var r= /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+      var num=$("#txtnum").val();
+      if($("#txtnum").val()=="")
+      {
+          
+        $("#sym2").css("display","inline");
+        $("#sym2").html("Fill your number please");
+        $("#txtnum").addClass("not-ok").removeClass("ok");
+         ja=false;
+      }
+      else if(r.test(num)==false)
+      {
+        
+        $("#sym2").css("display","inline");
+        $("#sym2").html("Fill Correct Number please");
+        $("#txtnum").addClass("not-ok").removeClass("ok");
+         ja=false;
+      }
+      else
+      {
+        $("#sym2").css("display","inline")
+        $("#sym2").html("");
+        $("#txtnum").addClass("ok").removeClass("not-ok");
+        ja=true;
+      }
+      
+   
+    })
+ /*  $("#txtbtn").click(function(){
+       if(ja==true)
+       {
+           document.getElementById("frm").action="";
+           document.frm.submit();
+       }
+       else
+       {
+           alert("Fill Correct Details");
+       }
+   })*/
+
+    });
+    </script>
+  
+<script>
+    function doshow(pic)
+    {
+        var image = document.getElementById('txtp1');
+image.src = URL.createObjectURL(pic.files[0]);
+    }
+    function doshowid(id)
+    {
+        var image = document.getElementById('txtp2');
+image.src = URL.createObjectURL(id.files[0]);
+    }
+</script>
+
+</head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="text-center"><h3>Worker Profile</h3></div>
+        </div>
+    <form action="/worker-profileSub" id="frm" name="frm" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-7" id="email">
+                
+                    <label for="txtemail" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="txtemail" name="txtemail" placeholder="abc@gmail.com">
+                    <span id="sym1"></span>
+            </div>
+        </div>
+
+
+        <div class="row" id="rhave3">
+            <div class="col-md-4">
+                <label for="txtname" class="form-label">Name</label>
+                <input type="text" class="form-control" id="txtname" name="txtname">
+            </div>
+
+            <div class="col-md-4">
+                <label for="txtnum" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="txtnum" name="txtnum">
+                <span id="sym2"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label for="txtcity" class="form-label">City</label>
+<input class="form-control" list="datalistOptions" id="txtcity" name="txtcity" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="Bathinda">
+  <option value="Jalandhar">
+  <option value="Bihar">
+  <option value="Chandigarh">
+  <option value="Ludhiana">
+</datalist>
+            </div>
+        </div>
+
+
+        <div class="row" id="rhaveadd">
+            <div class="col-md-8">
+                
+                    <label for="txtaddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="txtaddress" name="txtaddress" placeholder="Apartment, studio, or floor">
+                
+            </div>
+        </div>
+
+        <div class="row" id="rhave31">
+            <div class="col-md-4">
+                <label for="txtwork" class="form-label">Category</label>
+<input class="form-control" style="width: 350px;" list="datalistOptions1" id="txtwork" name="txtwork" placeholder="Type to search...">
+<datalist id="datalistOptions1">
+  <option value="Plumber">
+  <option value="Electrician">
+  <option value="Wire technician">
+  <option value="T.V,Cable operator">
+  <option value="Cook">
+    <option value="Anime Painter">
+        <option value="Gardener">
+</datalist>
+            </div>
+
+
+            
+            <div class="col-md-3">
+                <label for="txtexp" class="form-label">Experience</label>
+                <input type="number" class="form-control" id="txtexp" name="txtexp">
+             
+            </div>
+
+            <div class="col-md-4">
+                <label for="txtshop" class="form-label">Firm/Shop</label>
+                <input type="text" class="form-control" id="txtshop" name="txtshop" >
+            </div>
+                  
+    
+        </div>
+
+
+        <div class="row" id="rhavearea">
+            <div class="col-md-8">
+                <label for="txtarea" class="form-label">Work Done Before</label>
+                    <textarea class="form-control" style="width:700px;height:90px" name="txtarea"  placeholder="Leave a comment here" id="txtarea"></textarea>
+                   
+                  
+            </div>
+        </div>
+
+
+
+        <div class="row" id="rhavepic">
+            <div class="col-md-6">
+                <input type="file" id="txtf1" name="txtf1" onchange="doshow(this)">
+                <img src="" alt="" width="100px" height="100px" id="txtp1">
+            </div>
+
+
+            <div class="col-md-6">
+                <input type="file" id="txtf2" name="txtf2" onchange="doshowid(this)">
+                <img src="" alt="" width="100px" height="100px" id="txtp2">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="btn1" class="col-md-8">
+                <div id="btn2" class="btn-lg bg-info">
+                  <input type="submit"  value="Submit" id="txtbtn">
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    
+  </body>
+</html>

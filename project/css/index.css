@@ -1,0 +1,202 @@
+
+#box
+{
+    width: 480px;
+   
+    height: 550px;
+}
+#txtf1
+{
+    width: 150px;
+    height: 155px;
+
+    background-image: url(../pics/userlogin.png);
+    background-size: contain;
+    margin: auto;
+    background-repeat: no-repeat;
+    border-radius:35%;
+}
+#frm
+{
+   width: auto;
+   padding-top: 10px;
+    height: 400px;
+}
+#table
+{
+    width: 400px;
+    margin-top: auto;
+  
+    margin: auto;
+    font-size: x-large;
+    font-weight: 600;
+    height: 265px; 
+}
+input[type="text"]
+{
+    width: 180px;
+}
+input[type="password"]
+{
+    width: 180px;
+}
+#signup
+{
+    width: 160px;
+    height: 60px;
+    background-image: url(../pics/cooltext403182045580900.png);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    margin: auto;
+    margin-top: 10px;
+}
+#sym1
+{
+    display: none;
+}
+#sym2
+{
+    margin-left: 300px;
+    
+}
+#box1
+{
+    width: 480px;
+
+    height: 550px;
+}
+#txtf2
+{
+   
+    
+    margin: auto;
+    width: 180px;
+    height: 168px;
+    background-image: url(../pics/userlogin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 25px;
+    border-radius: 30%;
+}
+#frm1
+{
+    margin: auto;
+    width: 480px;
+    padding-top: 10px;
+    height: 400px;
+    
+    
+}
+#table1
+{
+    width: 400px;
+   
+   
+    margin: auto;
+    font-size: x-large;
+    font-weight: 600;
+    height: 200px;
+    margin-top: 30px;
+}
+#login
+{
+    width: 160px;
+    height: 60px;
+    background-image: url(../pics/cooltext403218949179488.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    margin-left: 200px;
+    margin-top: 10px;
+}
+#sym3
+{
+    margin-left: 160px;
+    
+}
+.not-ok
+{
+    background-color: red;
+    
+}
+.ok{
+    background-color: royalblue;
+}
+#boxboss
+{
+    border: red 2px solid;
+    
+    
+    width: inherit;
+    height: 100px;
+    
+    background-color: #34322e;
+}
+#box111
+{
+    color: aliceblue;
+    border: 2px  aliceblue solid;
+    width: 350px;
+    height: 50px;
+    float: left;
+}
+#sitename
+{
+    font-size: xx-large;
+    color: aliceblue;
+    text-decoration: underline;
+    border: 2px  aliceblue solid;
+}
+#box2
+{
+    width: 100px;
+    
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#box3
+{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+   
+    
+}
+#boxforms
+{
+   
+    width: 400px;
+    float: right;
+    
+}
+#rteam
+{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: burlywood;
+}
+#rservices
+{
+    border: 2px black solid;
+    height: 600px;
+    justify-content: center;
+    background-image: url(../pics/124518.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#rc1
+{
+    margin-top: 70px;
+}
+#rc2
+{
+    margin-top: 70px;
+}
+#rc3
+{
+    margin-top: 70px;
+}
+
